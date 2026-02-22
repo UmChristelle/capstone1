@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Explorer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-950 text-white min-h-screen flex flex-col">
+
+  <nav class="bg-gray-900 border-b border-gray-800 px-8 py-4 flex justify-between items-center sticky top-0 z-50 shadow-lg">
+    <div class="flex items-center gap-3">
+      <span class="text-3xl">📚</span>
+      <h1 class="text-2xl font-bold text-white tracking-wide">Book <span class="text-indigo-400">Explorer</span></h1>
+    </div>
+    <ul class="flex gap-8 text-sm font-semibold text-gray-300">
+      <li><a href="index.html" class="hover:text-indigo-400 transition duration-200 border-b-2 border-indigo-400 pb-1">Home</a></li>
+      <li><a href="favorites.html" class="hover:text-indigo-400 transition duration-200">Favorites</a></li>
+      <li><a href="about.html" class="hover:text-indigo-400 transition duration-200">About</a></li>
+    </ul>
+  </nav>
+
+  <section class="flex flex-col items-center justify-center text-center px-6 py-32 bg-gradient-to-br from-gray-950 via-indigo-950 to-gray-950 flex-grow">
+    <span class="bg-indigo-500 text-white text-xs font-semibold px-4 py-1 rounded-full mb-6 uppercase tracking-widest">Explore. Discover. Read.</span>
+    <h2 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+      Find Your Next <br/>
+      <span class="text-indigo-400">Favorite Book</span>
+    </h2>
+    <p class="text-gray-400 text-lg md:text-xl max-w-xl mb-10">
+      Search millions of books, explore new worlds, and build your personal reading list — all in one place.
+    </p>
+    <div class="flex gap-4 flex-wrap justify-center">
+      <a href="#books" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-4 rounded-full transition duration-200 shadow-lg shadow-indigo-500/30">
+        🔍 Explore Books
+      </a>
+      <a href="favorites.html" class="border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white font-semibold px-8 py-4 rounded-full transition duration-200">
+        ❤️ My Favorites
+      </a>
+    </div>
+
+    <div class="flex gap-12 mt-16 text-center flex-wrap justify-center">
+      <div>
+        <p class="text-3xl font-bold text-indigo-400">10M+</p>
+        <p class="text-gray-500 text-sm mt-1">Books Available</p>
+      </div>
+      <div>
+        <p class="text-3xl font-bold text-indigo-400">50K+</p>
+        <p class="text-gray-500 text-sm mt-1">Authors</p>
+      </div>
+      <div>
+        <p class="text-3xl font-bold text-indigo-400">100+</p>
+        <p class="text-gray-500 text-sm mt-1">Genres</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="books" class="px-8 py-16 bg-gray-900">
+    <h3 class="text-2xl font-bold text-white mb-2">📖 Featured Books</h3>
+    <p class="text-gray-400 mb-8 text-sm">Books will load here from the API in Lab 3</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      
+      <div class="bg-gray-800 rounded-2xl p-4 animate-pulse h-64"></div>
+      <div class="bg-gray-800 rounded-2xl p-4 animate-pulse h-64"></div>
+      <div class="bg-gray-800 rounded-2xl p-4 animate-pulse h-64"></div>
+      <div class="bg-gray-800 rounded-2xl p-4 animate-pulse h-64"></div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 border-t border-gray-800 py-8 px-8 mt-auto">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-2">
+        <span class="text-2xl">📚</span>
+        <span class="font-bold text-indigo-400">Book Explorer</span>
+      </div>
+      <p class="text-gray-500 text-sm">© 2026 Book Explorer. All rights reserved.</p>
+      <ul class="flex gap-6 text-sm text-gray-400">
+        <li><a href="index.html" class="hover:text-indigo-400 transition">Home</a></li>
+        <li><a href="favorites.html" class="hover:text-indigo-400 transition">Favorites</a></li>
+        <li><a href="about.html" class="hover:text-indigo-400 transition">About</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
