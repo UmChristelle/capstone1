@@ -1,34 +1,8 @@
 
 import { addFavorite, isFavorite } from './favorites.js';
+import { fetchBooks } from './fetchBooks.js';
 
-const books = [
-  {
-    id: '1',
-    title: 'The Great Gatsby',
-    author: 'F. Scott Fitzgerald',
-    cover: 'https://covers.openlibrary.org/b/id/8739161-M.jpg'
-  },
-  {
-    id: '2',
-    title: 'To Kill a Mockingbird',
-    author: 'Harper Lee',
-    cover: 'https://covers.openlibrary.org/b/id/8228691-M.jpg'
-  },
-  {
-    id: '3',
-    title: '1984',
-    author: 'George Orwell',
-    cover: 'https://covers.openlibrary.org/b/id/7222246-M.jpg'
-  },
-  {
-    id: '4',
-    title: 'Pride and Prejudice',
-    author: 'Jane Austen',
-    cover: 'https://covers.openlibrary.org/b/id/8406786-M.jpg'
-  }
-];
-
-function renderBooks() {
+function renderBooks(books) {
   const grid = document.getElementById('booksGrid');
   grid.innerHTML = '';
 
@@ -50,7 +24,6 @@ function renderBooks() {
         </button>
       </div>
     `;
-
     const btn = card.querySelector('button');
     btn.addEventListener('click', () => {
       const added = addFavorite(book);
@@ -65,4 +38,9 @@ function renderBooks() {
   });
 }
 
-renderBooks();
+async function init() {
+  const books = await fetchBooks('fiction');
+  renderBooks(books);
+}
+
+init();
