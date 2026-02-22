@@ -2,9 +2,31 @@
 import { addFavorite, isFavorite } from './favorites.js';
 import { fetchBooks } from './fetchBooks.js';
 
+function showLoading() {
+  document.getElementById('loadingSpinner').classList.remove('hidden');
+  document.getElementById('booksGrid').classList.add('hidden');
+  document.getElementById('noResults').classList.add('hidden');
+}
+
+function hideLoading() {
+  document.getElementById('loadingSpinner').classList.add('hidden');
+  document.getElementById('booksGrid').classList.remove('hidden');
+}
+
+function showNoResults() {
+  document.getElementById('noResults').classList.remove('hidden');
+  document.getElementById('booksGrid').classList.add('hidden');
+}
+
 function renderBooks(books) {
   const grid = document.getElementById('booksGrid');
   grid.innerHTML = '';
+
+  if (books.length === 0) {
+    hideLoading();
+    showNoResults();
+    return;
+  }
 
   books.forEach(book => {
     const alreadySaved = isFavorite(book.id);
@@ -40,7 +62,9 @@ function renderBooks(books) {
 }
 
 async function init(query = 'fiction') {
+  showLoading();
   const books = await fetchBooks(query);
+  hideLoading();
   renderBooks(books);
 }
 
