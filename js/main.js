@@ -24,6 +24,7 @@ function renderBooks(books) {
         </button>
       </div>
     `;
+
     const btn = card.querySelector('button');
     btn.addEventListener('click', () => {
       const added = addFavorite(book);
@@ -38,9 +39,25 @@ function renderBooks(books) {
   });
 }
 
-async function init() {
-  const books = await fetchBooks('fiction');
+async function init(query = 'fiction') {
+  const books = await fetchBooks(query);
   renderBooks(books);
 }
+
+document.getElementById('searchBtn').addEventListener('click', async () => {
+  const query = document.getElementById('searchInput').value.trim();
+  if (query) {
+    await init(query);
+  }
+});
+
+document.getElementById('searchInput').addEventListener('keypress', async (e) => {
+  if (e.key === 'Enter') {
+    const query = document.getElementById('searchInput').value.trim();
+    if (query) {
+      await init(query);
+    }
+  }
+});
 
 init();

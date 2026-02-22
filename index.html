@@ -73,13 +73,28 @@
     </div>
   </section>
 
-  <section id="books" class="px-8 py-16 bg-gray-900">
+ <section id="books" class="px-8 py-16 bg-gray-900">
     <h3 class="text-2xl font-bold text-white mb-2">📖 Featured Books</h3>
-    <p class="text-gray-400 mb-8 text-sm">Browse and save your favorite books!</p>
-    <div id="booksGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <p class="text-gray-400 mb-6 text-sm">Browse and save your favorite books!</p>
 
-</div>
-  </section>
+    <div class="flex gap-3 mb-8">
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Search for books..." 
+        class="flex-grow px-5 py-3 rounded-full bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-indigo-500 text-sm"
+      />
+      <button 
+        id="searchBtn"
+        class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-full transition duration-200"
+      >
+        🔍 Search
+      </button>
+    </div>
+
+    <div id="booksGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    </div>
+</section>
 
   <footer class="bg-gray-900 border-t border-gray-800 py-8 px-8 mt-auto">
     <div class="flex flex-col md:flex-row justify-between items-center gap-4">
