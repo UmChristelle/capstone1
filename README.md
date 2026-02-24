@@ -2,7 +2,7 @@
 
 A responsive, interactive, and API-powered book browsing web app built as part of the Frontend Phase 1 Capstone.
 
-## 🌟 What It Does
+##  What It Does
 
 Book Explorer lets you search millions of real books, save your favorites, and browse across a clean, modern interface all from any device.
 
@@ -11,7 +11,7 @@ Book Explorer lets you search millions of real books, save your favorites, and b
 - 💾 Favorites persist across page refreshes using localStorage
 - 📱 Fully responsive on mobile, tablet, and desktop
 
-## 🛠️ Built With
+##  Built With
 
 - HTML5
 - Tailwind CSS
@@ -33,7 +33,7 @@ capstone1/
 └── README.md
 ```
 
-## 🚀 How to Run
+##  How to Run
 
 1. Clone the repo:
 ```
@@ -42,7 +42,7 @@ capstone1/
 2. Open `index.html` in your browser
 3. No installation needed — it runs straight in the browser!
 
-## 📸 Pages
+##  Pages
 
 | Page | Description |
 |------|-------------|
@@ -50,7 +50,7 @@ capstone1/
 | Favorites | View and remove your saved books |
 | About | Learn about the app and tech stack |
 
-## 👩‍💻 Author
+##  Author
 
 **UmChristelle**  
 umutoni christella
