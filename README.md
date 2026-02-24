@@ -4,7 +4,7 @@ A responsive, interactive, and API-powered book browsing web app built as part o
 
 ## 🌟 What It Does
 
-Book Explorer lets you search millions of real books, save your favorites, and browse across a clean, modern interface — all from any device.
+Book Explorer lets you search millions of real books, save your favorites, and browse across a clean, modern interface all from any device.
 
 - 🔍 Search books by title using the Open Library API
 - ❤️ Add and remove books from your personal favorites list
