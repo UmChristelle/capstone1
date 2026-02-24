@@ -42,7 +42,7 @@ function renderBooks(books) {
           data-id="${book.id}"
           ${alreadySaved ? 'disabled' : ''}
         >
-          ${alreadySaved ? '✅ Saved' : '❤️ Add to Favorites'}
+          ${alreadySaved ? '✅ Saved' : '🤍 Add to Favorites'}
         </button>
       </div>
     `;
