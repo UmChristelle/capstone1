@@ -61,7 +61,7 @@ function renderBooks(books) {
   });
 }
 
-async function init(query = 'fiction') {
+async function init(query = 'jesus') {
   showLoading();
   const books = await fetchBooks(query);
   hideLoading();
