@@ -3,7 +3,7 @@ const BASE_URL = 'https://openlibrary.org/search.json';
 
 export async function fetchBooks(query = 'javascript') {
   try {
-    const response = await fetch(`${BASE_URL}?q=${query}&limit=12`);
+    const response = await fetch(`${BASE_URL}?q=${query}&limit=16`);
     const data = await response.json();
 
     const books = data.docs.map(book => ({
